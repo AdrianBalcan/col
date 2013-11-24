@@ -35,8 +35,7 @@
       background-position: center center;
     }
     </style>
-  </head>
-  <body ng-app="myApp" ng-controller='Controller'>
+  <div ng-app="myApp" ng-controller='Controller'>
  
     <ul rn-carousel rn-carousel-indicator class="image">
       <li ng-repeat="image in cityImages" style="background-image:url({{ image }});">
@@ -61,6 +60,7 @@
       });
 
     </script>
+    </div>
 <!--           <div id='imaginelocatie' class='clearfix'>
            </div>
 -->           <p id='locatie'>
