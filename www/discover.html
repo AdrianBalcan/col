@@ -27,7 +27,25 @@
                <div id="harta">
                                <div id="map"></div>
 
+	<script>
+		var map = L.map('map');
 
+		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Discover locations'
+		}).addTo(map);
+
+		function onLocationFound(e) {
+			L.marker(e.latlng).addTo(map)
+				.bindPopup("You are here").openPopup();
+
+			L.circle(e.latlng, radius).addTo(map);
+		}
+
+
+
+		map.locate({setView: true, maxZoom: 16});
+	</script>
            </div>
            
               
